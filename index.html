@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mnd-ver" content="hj9mtik0nnykq6av9l9rg" />
+  <title>ADD MONTIAD</title>
+  
+  <!-- 1. MONDIAD INTERSTITIAL - PETI HARTA MUNCUL PAS COUNTDOWN KELAR -->
+  <script async src="https://ss.mrmnd.com/interstitial.js" data-mndintid="77e9d5f6-f05f-495f-a3aa-d002b8e6733e"></script>
+  
+  <!-- 2. ADSTERRA POPUNDER - TAB BARU KEBUKA PAS USER INTERAKSI -->
+  <script src="https://pl29239800.profitablecpmratenetwork.com/93/96/18/93961823b5cd16ae027898e70d795058.js"></script>
+
+  <style>
+    body{background:#000;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif;text-align:center;flex-direction:column}
+    #countdown{font-size:80px;font-weight:bold}
+    video{width:100%;max-width:500px;display:none;}
+  </style>
+</head>
+<body>
+  <div id="countdown">4</div>
+  <video id="video" src="video30.mp4" controls autoplay muted playsinline></video>
+
+  <!-- 3. MONDIAD IN-PAGE PUSH - FIN+ NONGOL DI BAWAH VIDEO -->
+  <script async src="https://ss.mrmnd.com/static/1f8a267d-98d2-4dfe-92d3-5115459522f4.js"></script>
+
+<script>
+let c=4;
+const cd=document.getElementById('countdown');
+const int=setInterval(()=>{
+  c--;
+  cd.textContent=c;
+  if(c===0){
+    clearInterval(int);
+    document.getElementById('countdown').style.display='none';
+    document.getElementById('video').style.display='block';
+    document.getElementById('video').play();
+  }
+},1000);
+</script>
+</body>
+</html>
