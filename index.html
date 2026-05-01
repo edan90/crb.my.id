@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TEMPEL META VERIFIKASI MONETAG DI SINI -->
+  <!-- Contoh: <meta name="monetag" content="xxx"> -->
+  
+  <title>Konten Eksklusif</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- 1. TEMPEL MULTITAG MONETAG LU DI SINI -->
+  <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="GANTI-ID-MULTITAG"></script>
+
+  <style>
+    body{background:#000;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif;text-align:center;flex-direction:column}
+    #countdown{font-size:80px;font-weight:bold}
+    video{width:100%;max-width:500px;display:none;}
+    .hide{display:none}
+  </style>
+</head>
+<body>
+  <div id="countdown">4</div>
+  <video id="video" src="video30.mp4" controls autoplay muted playsinline></video>
+
+<script>
+// 2. GANTI 2 LINK INI PAKE DIRECT LINK MONETAG LU
+const LINK_LANJUT = "https://DIRECT-LINK-1-LU";
+const LINK_KELUAR = "https://DIRECT-LINK-2-LU";
+
+let c=4;
+const cd=document.getElementById('countdown');
+const int=setInterval(()=>{
+  c--;
+  cd.textContent=c;
+  if(c===0){
+    clearInterval(int);
+    document.getElementById('countdown').style.display='none';
+    document.getElementById('video').style.display='block';
+    document.getElementById('video').play();
+    
+    // REDIRECT KE DIRECT LINK MONETAG PAS VIDEO MULAI
+    setTimeout(()=>{window.location.href = LINK_LANJUT}, 3000);
+  }
+},1000);
+</script>
+</body>
+</html>
