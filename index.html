@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="9e376a3b204f7339a0d5229c35d27b00">
+  <title>Konten Eksklusif</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      flex-direction: column;
+    }
+    #countdown {
+      font-size: 80px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #playBtn {
+      display: none;
+      padding: 15px 40px;
+      font-size: 20px;
+      background: #ff0050;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #playBtn:active {
+      transform: scale(0.95);
+    }
+    video {
+      width: 90%;
+      max-width: 500px;
+      display: none;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Video akan segera dimulai</h2>
+  <div id="countdown">4</div>
+  <button id="playBtn" onclick="mulaiVideo()">NONTON SEKARANG</button>
+  
+  <!-- PAKE VIDEO30.MP4 DARI GITHUB LU -->
+  <video id="video" src="video30.mp4" controls></video>
+
+<script>
+const LINK_MONETAG = "https://google.com"; // Buat test doang
+
+let c = 4;
+const cd = document.getElementById('countdown');
+const int = setInterval(() => {
+  c--;
+  cd.textContent = c;
+  if (c === 0) {
+    clearInterval(int);
+    cd.style.display = 'none';
+    document.getElementById('playBtn').style.display = 'inline-block';
+  }
+}, 1000);
+
+function mulaiVideo() {
+  const vid = document.getElementById('video');
+  vid.style.display = 'block';
+  vid.play();
+  window.open(LINK_MONETAG, '_blank');
+  document.getElementById('playBtn').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
